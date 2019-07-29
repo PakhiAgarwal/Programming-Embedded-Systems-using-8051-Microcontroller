@@ -1,0 +1,127 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/21/2014  18:30:49  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE motor.obj TO mot
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  motor.obj (MOTOR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  mot (MOTOR)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         _DATA_GROUP_
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     004BH     UNIT         ?PR?MAIN?MOTOR
+            CODE    084BH     0037H     UNIT         ?PR?_DELAY?MOTOR
+            CODE    0882H     0016H     UNIT         ?C?LIB_CODE
+            CODE    0898H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   mot (MOTOR)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MOTOR
+
+?PR?MAIN?MOTOR                 0008H    0002H
+  +--> ?PR?_DELAY?MOTOR
+
+?PR?_DELAY?MOTOR               000AH    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  mot (MOTOR)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MOTOR
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/21/2014  18:30:49  PAGE 2
+
+
+  D:00A0H         PUBLIC        P2
+  B:0090H.0       PUBLIC        ip1
+  B:0090H.1       PUBLIC        ip2
+  B:00A0H.0       PUBLIC        op1
+  C:0851H         PUBLIC        _delay
+  B:00A0H.1       PUBLIC        op2
+  C:0800H         PUBLIC        main
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:0800H         LINE#         7
+  C:0800H         LINE#         8
+  C:0800H         LINE#         10
+  C:080BH         LINE#         11
+  C:080BH         LINE#         12
+  C:080FH         LINE#         13
+  C:0816H         LINE#         14
+  C:0818H         LINE#         15
+  C:081BH         LINE#         16
+  C:081DH         LINE#         17
+  C:0820H         LINE#         18
+  C:0824H         LINE#         19
+  C:0827H         LINE#         20
+  C:082BH         LINE#         21
+  C:0832H         LINE#         22
+  C:0836H         LINE#         23
+  C:083DH         LINE#         24
+  C:0841H         LINE#         25
+  C:0848H         LINE#         26
+  C:084AH         LINE#         27
+  -------         ENDPROC       MAIN
+  C:084DH         SYMBOL        L?0013
+  -------         PROC          L?0012
+  -------         ENDPROC       L?0012
+  C:084DH         SYMBOL        L?0013
+  -------         PROC          _DELAY
+  D:000AH         SYMBOL        x
+  -------         DO            
+  D:0082H         SYMBOL        a
+  D:0006H         SYMBOL        b
+  -------         ENDDO         
+  C:0851H         LINE#         28
+  C:0855H         LINE#         29
+  C:0855H         LINE#         31
+  C:086EH         LINE#         32
+  C:0881H         LINE#         33
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        MOTOR
+
+  -------         MODULE        ?C?SLCMP
+  C:0882H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0082H BYTE ( 6%) *
+******************************************************************************
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/21/2014  18:30:49  PAGE 3
+
+
+
+Program Size: data=13.0 xdata=0 code=167
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

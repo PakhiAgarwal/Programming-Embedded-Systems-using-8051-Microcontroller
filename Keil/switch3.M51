@@ -1,0 +1,104 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/17/2014  16:04:55  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE switchled1.obj TO switch3
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  switchled1.obj (SWITCHLED1)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  switch3 (SWITCHLED1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0031H     UNIT         ?PR?_DELAY?SWITCHLED1
+            CODE    0831H     0016H     UNIT         ?C?LIB_CODE
+            CODE    0847H     0010H     UNIT         ?PR?MAIN?SWITCHLED1
+            CODE    0857H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   switch3 (SWITCHLED1)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?SWITCHLED1
+
+?PR?MAIN?SWITCHLED1            -----    -----
+  +--> ?PR?_DELAY?SWITCHLED1
+
+?PR?_DELAY?SWITCHLED1          0008H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  switch3 (SWITCHLED1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SWITCHLED1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/17/2014  16:04:55  PAGE 2
+
+
+  C:0800H         PUBLIC        _delay
+  C:0847H         PUBLIC        main
+  B:0090H.0       PUBLIC        a
+  B:0090H.1       PUBLIC        b
+  -------         PROC          MAIN
+  C:0847H         LINE#         5
+  C:0847H         LINE#         6
+  C:0847H         LINE#         7
+  C:084BH         LINE#         8
+  C:084BH         LINE#         9
+  C:084BH         LINE#         10
+  C:084EH         LINE#         11
+  C:084EH         LINE#         12
+  C:0855H         LINE#         13
+  C:0855H         LINE#         14
+  -------         ENDPROC       MAIN
+  -------         PROC          _DELAY
+  D:0008H         SYMBOL        x
+  -------         DO            
+  D:0082H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:0800H         LINE#         15
+  C:0804H         LINE#         16
+  C:0804H         LINE#         18
+  C:081DH         LINE#         19
+  C:0830H         LINE#         20
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        SWITCHLED1
+
+  -------         MODULE        ?C?SLCMP
+  C:0831H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0041H BYTE ( 3%) *
+******************************************************************************
+
+Program Size: data=11.0 xdata=0 code=102
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

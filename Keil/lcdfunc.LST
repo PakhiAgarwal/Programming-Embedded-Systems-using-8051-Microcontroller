@@ -1,0 +1,109 @@
+C51 COMPILER V9.01   LCDFUNC                                                               06/18/2014 17:18:24 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LCDFUNC
+OBJECT MODULE PLACED IN lcdfunc.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lcdfunc.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #define LCD P1
+   3          sbit rs=P2^0;
+   4          sbit rw=P2^1;
+   5          sbit en=P2^2;
+   6          void delay(int x);
+   7          void call();
+   8          void fun();
+   9          void main()
+  10          {
+  11   1      LCD=0x38;
+  12   1      call();
+  13   1      LCD=0x0E;
+  14   1      call();
+  15   1      LCD=0x06;
+  16   1      call();
+  17   1      LCD=0x80;
+  18   1      call();
+  19   1      LCD='H';
+  20   1      fun();
+  21   1      LCD='E';
+  22   1      fun();
+  23   1      LCD='L';
+  24   1      fun();
+  25   1      LCD='L';
+  26   1      fun();
+  27   1      LCD='O';
+  28   1      fun();
+  29   1      LCD='!';
+  30   1      fun();
+  31   1      LCD='!';
+  32   1      fun();
+  33   1      LCD='!';
+  34   1      fun();
+  35   1      LCD=' ';
+  36   1      fun();
+  37   1      LCD='H';
+  38   1      fun();
+  39   1      LCD='o';
+  40   1      fun();
+  41   1      LCD='W';
+  42   1      fun();
+  43   1      LCD=' ';
+  44   1      fun();
+  45   1      LCD='A';
+  46   1      fun();
+  47   1      LCD='R';
+  48   1      fun();
+  49   1      LCD='E';
+  50   1      fun();
+  51   1      LCD=' ';
+  52   1      fun();
+  53   1      LCD=0xC0;
+  54   1      call();
+  55   1      LCD='Y';
+C51 COMPILER V9.01   LCDFUNC                                                               06/18/2014 17:18:24 PAGE 2   
+
+  56   1      fun();
+  57   1      LCD='o';
+  58   1      fun();
+  59   1      LCD='U';
+  60   1      fun();
+  61   1      LCD='?';
+  62   1      fun();
+  63   1      LCD='?';
+  64   1      fun();
+  65   1      }
+  66          void delay(int x)
+  67          {
+  68   1      unsigned int i,j;
+  69   1      for(i=0;i<40000;i++);
+  70   1      for(j=0;j<x;j++);
+  71   1      
+  72   1      }
+  73          void call()
+  74          {
+  75   1      rs=0;rw=0;en=1;
+  76   1      delay(10);
+  77   1      en=0;
+  78   1      }
+  79          void fun()
+  80          {
+  81   1      rs=1;rw=0;en=1;
+  82   1      delay(10);
+  83   1      en=0;
+  84   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    232    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

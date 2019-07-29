@@ -1,0 +1,89 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/15/2014  13:36:07  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE lower.obj TO alter
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  lower.obj (LOWER)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  alter (LOWER)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0029H     UNIT         ?PR?MAIN?LOWER
+            CODE    0829H     0016H     UNIT         ?C?LIB_CODE
+            CODE    083FH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   alter (LOWER)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LOWER
+
+
+
+SYMBOL TABLE OF MODULE:  alter (LOWER)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LOWER
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0800H         PUBLIC        main
+  B:0090H.0       PUBLIC        a
+  B:0090H.1       PUBLIC        b
+  B:0090H.2       PUBLIC        c
+  B:0090H.3       PUBLIC        d
+  B:0090H.4       PUBLIC        e
+  B:0090H.5       PUBLIC        f
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/15/2014  13:36:07  PAGE 2
+
+
+  B:0090H.6       PUBLIC        g
+  B:0090H.7       PUBLIC        h
+  -------         PROC          MAIN
+  -------         DO            
+  D:0082H         SYMBOL        x
+  -------         ENDDO         
+  C:0800H         LINE#         10
+  C:0800H         LINE#         11
+  C:0800H         LINE#         13
+  C:0800H         LINE#         14
+  C:0800H         LINE#         15
+  C:0810H         LINE#         16
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LOWER
+
+  -------         MODULE        ?C?SLCMP
+  C:0829H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0029H BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=78
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

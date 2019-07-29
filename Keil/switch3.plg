@@ -1,0 +1,86 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\pakhi\switch3.uvproj
+Project File Date:  06/17/2014
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling switchled1.c...
+SWITCHLED1.C(2): error C202: 'p1': undefined identifier
+SWITCHLED1.C(3): error C202: 'p1': undefined identifier
+SWITCHLED1.C(6): error C202: 'a': undefined identifier
+SWITCHLED1.C(6): error C202: 'b': undefined identifier
+SWITCHLED1.C(9): error C202: 'a': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling switchled1.c...
+SWITCHLED1.C(11): warning C206: 'delay': missing function-prototype
+SWITCHLED1.C(11): error C267: 'delay': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling switchled1.c...
+SWITCHLED1.C(13): warning C275: expression with possibly no effect
+SWITCHLED1.C(24): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling switchled1.c...
+SWITCHLED1.C(13): warning C275: expression with possibly no effect
+SWITCHLED1.C(24): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling switchled1.c...
+SWITCHLED1.C(13): warning C275: expression with possibly no effect
+SWITCHLED1.C(24): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling switchled1.c...
+SWITCHLED1.C(13): warning C275: expression with possibly no effect
+SWITCHLED1.C(24): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling switchled1.c...
+SWITCHLED1.C(13): warning C275: expression with possibly no effect
+SWITCHLED1.C(24): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling switchled1.c...
+SWITCHLED1.C(24): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling switchled1.c...
+linking...
+Program Size: data=11.0 xdata=0 code=104
+"switch3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling switchled1.c...
+linking...
+Program Size: data=11.0 xdata=0 code=104
+"switch3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling switchled1.c...
+linking...
+Program Size: data=11.0 xdata=0 code=104
+creating hex file from "switch3"...
+"switch3" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling switchled1.c...
+SWITCHLED1.C(13): warning C275: expression with possibly no effect
+SWITCHLED1.C(24): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling switchled1.c...
+SWITCHLED1.C(13): warning C275: expression with possibly no effect
+linking...
+Program Size: data=11.0 xdata=0 code=102
+creating hex file from "switch3"...
+"switch3" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling switchled1.c...
+SWITCHLED1.C(13): warning C275: expression with possibly no effect
+linking...
+Program Size: data=11.0 xdata=0 code=102
+creating hex file from "switch3"...
+"switch3" - 0 Error(s), 1 Warning(s).

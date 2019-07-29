@@ -1,0 +1,53 @@
+C51 COMPILER V9.01   LCDFOURBIT                                                            06/27/2014 02:31:39 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LCDFOURBIT
+OBJECT MODULE PLACED IN lcdfourbit.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lcdfourbit.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit rs=P1^0;
+   3          sbit en=P1^1;
+   4          #define LCD P1
+   5          void delay(unsigned int a);
+   6          void cmd_(unsigned char value)
+   7          {
+   8   1      unsigned char h,temp;
+   9   1      temp=value;
+  10   1      temp=temp&0xF0;
+  11   1      P1=temp;
+  12   1      rs=0;
+  13   1      en=1;
+  14   1      delay(10);
+  15   1      en=0;
+  16   1      h=value;
+  17   1      h=h<<4;
+  18   1      h=h&0xF0;
+  19   1      P1=1;
+  20   1      rs=0;
+  21   1      en=1;
+  22   1      delay(10);
+  23   1      en=0;
+  24   1      }
+  25          void delay(unsigned int a)
+  26          {
+  27   1      unsigned int x,y;
+  28   1      for(x=0;x<40000;x++);
+  29   1      for(y=0;y<a;y++);
+  30   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     84    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       3
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

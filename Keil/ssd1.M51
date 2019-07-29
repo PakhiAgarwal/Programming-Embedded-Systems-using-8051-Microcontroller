@@ -1,0 +1,113 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/13/2014  13:58:42  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE ssd.obj TO ssd1
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  ssd.obj (SSD)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?COPY)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  ssd1 (SSD)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000DH     UNIT         _DATA_GROUP_
+            IDATA   0015H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     010CH     UNIT         ?C?LIB_CODE
+            CODE    090CH     0031H     UNIT         ?PR?_DELAY?SSD
+            CODE    093DH     0030H     UNIT         ?PR?MAIN?SSD
+            CODE    096DH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0979H     000AH     UNIT         ?CO?SSD
+
+
+
+OVERLAY MAP OF MODULE:   ssd1 (SSD)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?SSD
+
+?PR?MAIN?SSD                   0008H    000BH
+  +--> ?CO?SSD
+  +--> ?PR?_DELAY?SSD
+
+?PR?_DELAY?SSD                 0013H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  ssd1 (SSD)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/13/2014  13:58:42  PAGE 2
+
+
+  -------         MODULE        SSD
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:090CH         PUBLIC        _delay
+  C:093DH         PUBLIC        main
+  C:0979H         SYMBOL        _?ix1000
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  D:0009H         SYMBOL        A
+  -------         ENDDO         
+  C:093DH         LINE#         4
+  C:093DH         LINE#         5
+  C:093DH         LINE#         6
+  C:0950H         LINE#         7
+  C:0953H         LINE#         8
+  C:0953H         LINE#         9
+  C:095BH         LINE#         10
+  C:0962H         LINE#         11
+  C:096BH         LINE#         12
+  -------         ENDPROC       MAIN
+  -------         PROC          _DELAY
+  D:0013H         SYMBOL        x
+  -------         DO            
+  D:0082H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:090CH         LINE#         14
+  C:0910H         LINE#         15
+  C:0910H         LINE#         17
+  C:0929H         LINE#         18
+  C:093CH         LINE#         19
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        SSD
+
+  -------         MODULE        ?C?COPY
+  C:08D0H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+
+  -------         MODULE        ?C?SLCMP
+  C:08F6H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 006BH BYTE ( 5%) *
+******************************************************************************
+
+Program Size: data=22.0 xdata=0 code=390
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

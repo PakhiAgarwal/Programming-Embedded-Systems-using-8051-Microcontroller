@@ -1,0 +1,59 @@
+C51 COMPILER V9.01   SWITCHLED2                                                            06/17/2014 16:33:10 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE SWITCHLED2
+OBJECT MODULE PLACED IN switchled2.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE switchled2.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit a=P1^0;
+   3          sbit b=P1^1;
+   4          sbit c=P1^2;
+   5          void delay(int x);
+   6          void main()
+   7          {
+   8   1      unsigned int d;
+   9   1      a=0;b=1;c=1;
+  10   1      while(1)
+  11   1      {
+  12   2      for(d=0;d<15;d++)
+  13   2      { 
+  14   3      if((a==0)&&(d%2==0))      //even
+  15   3      {        
+  16   4      delay(20);
+  17   4      c=0;b=1;
+  18   4      }
+  19   3      else if((a==0)&&(d%2!=0))          //odd
+  20   3      {delay(20);
+  21   4      c=1;b=0;
+  22   4      }
+  23   3      else
+  24   3      {
+  25   4      c=1;b=1;
+  26   4      }
+  27   3      }d++;}}
+  28          void delay(int x)
+  29          {
+  30   1      unsigned int i,j;
+  31   1      for(i=0;i<40000;i++);
+  32   1      for(j=0;j<x;j++);
+  33   1      }
+  34          
+  35          
+  36          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    133    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

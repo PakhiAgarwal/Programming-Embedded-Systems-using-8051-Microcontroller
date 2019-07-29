@@ -1,0 +1,140 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/21/2014  18:37:37  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE motorswitch.obj TO motsw
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  motorswitch.obj (MOTORSWITCH)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  motsw (MOTORSWITCH)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         _DATA_GROUP_
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0061H     UNIT         ?PR?MAIN?MOTORSWITCH
+            CODE    0861H     0037H     UNIT         ?PR?_DELAY?MOTORSWITCH
+            CODE    0898H     0016H     UNIT         ?C?LIB_CODE
+            CODE    08AEH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   motsw (MOTORSWITCH)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MOTORSWITCH
+
+?PR?MAIN?MOTORSWITCH           0008H    0002H
+  +--> ?PR?_DELAY?MOTORSWITCH
+
+?PR?_DELAY?MOTORSWITCH         000AH    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  motsw (MOTORSWITCH)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MOTORSWITCH
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/21/2014  18:37:37  PAGE 2
+
+
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  B:0090H.0       PUBLIC        ip1
+  B:0090H.1       PUBLIC        ip2
+  B:0090H.2       PUBLIC        ip3
+  B:0090H.3       PUBLIC        ip4
+  B:00A0H.0       PUBLIC        op1
+  C:0867H         PUBLIC        _delay
+  B:00A0H.1       PUBLIC        op2
+  B:00A0H.2       PUBLIC        op3
+  B:00A0H.3       PUBLIC        op4
+  C:0800H         PUBLIC        main
+  B:0080H.0       PUBLIC        a
+  B:0080H.1       PUBLIC        b
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:0800H         LINE#         13
+  C:0800H         LINE#         14
+  C:0800H         LINE#         16
+  C:080BH         LINE#         17
+  C:080BH         LINE#         18
+  C:0813H         LINE#         19
+  C:081AH         LINE#         20
+  C:0820H         LINE#         21
+  C:0820H         LINE#         22
+  C:0828H         LINE#         23
+  C:082BH         LINE#         24
+  C:082BH         LINE#         25
+  C:0831H         LINE#         26
+  C:0831H         LINE#         27
+  C:0837H         LINE#         28
+  C:083AH         LINE#         29
+  C:083AH         LINE#         30
+  C:0840H         LINE#         31
+  C:0840H         LINE#         32
+  C:0846H         LINE#         33
+  C:0849H         LINE#         34
+  C:0849H         LINE#         35
+  C:084FH         LINE#         36
+  C:0857H         LINE#         37
+  C:085EH         LINE#         38
+  C:0860H         LINE#         39
+  -------         ENDPROC       MAIN
+  C:0863H         SYMBOL        L?0017
+  -------         PROC          L?0016
+  -------         ENDPROC       L?0016
+  C:0863H         SYMBOL        L?0017
+  -------         PROC          _DELAY
+  D:000AH         SYMBOL        x
+  -------         DO            
+  D:0082H         SYMBOL        a
+  D:0006H         SYMBOL        b
+  -------         ENDDO         
+  C:0867H         LINE#         41
+  C:086BH         LINE#         42
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/21/2014  18:37:37  PAGE 3
+
+
+  C:086BH         LINE#         44
+  C:0884H         LINE#         45
+  C:0897H         LINE#         46
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        MOTORSWITCH
+
+  -------         MODULE        ?C?SLCMP
+  C:0898H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0098H BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=13.0 xdata=0 code=189
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

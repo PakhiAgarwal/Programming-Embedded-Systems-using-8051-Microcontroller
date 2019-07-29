@@ -1,0 +1,74 @@
+C51 COMPILER V9.01   LCDNUM                                                                06/24/2014 01:08:27 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LCDNUM
+OBJECT MODULE PLACED IN lcdnum.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE lcdnum.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #define LCD P1
+   3          sbit rs=P2^0;
+   4          sbit rw=P2^1;
+   5          sbit en=P2^2;
+   6          void delay(int x);
+   7          void new(unsigned int a);
+   8          void main()
+   9          {
+  10   1      LCD=0x38;
+  11   1      rs=0;rw=0;en=1;
+  12   1      delay(10);
+  13   1      en=0;
+  14   1      LCD=0x0E;
+  15   1      rs=0;rw=0;en=1;
+  16   1      delay(10);
+  17   1      en=0;
+  18   1      LCD=0x06;
+  19   1      rs=0;rw=0;en=1;
+  20   1      delay(10);
+  21   1      en=0;
+  22   1      LCD=0x80;
+  23   1      rs=0;rw=0;en=1;
+  24   1      delay(10);
+  25   1      en=0;
+  26   1      new(1234);
+  27   1      /*rs=1;rw=0;en=1;
+  28   1      delay(10);
+  29   1      en=0;
+  30   1      }*/
+  31   1      }
+  32          void delay(int x)
+  33          {
+  34   1      unsigned int i,j;
+  35   1      for(i=0;i<40000;i++);
+  36   1      for(j=0;j<x;j++);
+  37   1      }
+  38          void new(unsigned int a)
+  39          {
+  40   1      unsigned int q;
+  41   1      //LCD_cmd(0x04);
+  42   1      while(a!=0)
+  43   1      {        
+  44   2      a=q%10;
+  45   2      q=q/a;
+  46   2      }
+  47   1      //LCD_dat(a)
+  48   1      
+  49   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    135    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+C51 COMPILER V9.01   LCDNUM                                                                06/24/2014 01:08:27 PAGE 2   
+
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

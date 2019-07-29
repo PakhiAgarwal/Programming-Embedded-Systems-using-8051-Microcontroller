@@ -1,0 +1,43 @@
+C51 COMPILER V9.01   LEDALTER2                                                             06/16/2014 21:33:13 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LEDALTER2
+OBJECT MODULE PLACED IN ledalter2.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE ledalter2.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1           #include<reg51.h>
+   2          sbit a=P1^0;
+   3          sbit b=P1^1;
+   4          sbit c=P1^2;
+   5          sbit d=P1^3;
+   6          sbit e=P1^4;
+   7          sbit f=P1^5;
+   8          sbit g=P1^6;
+   9          sbit h=P1^7;
+  10          void main()
+  11           {
+  12   1       unsigned int x;
+  13   1       while(1)
+  14   1      {
+  15   2       a=0;b=1;c=0;d=1;e=0;f=1;g=0;h=1;
+  16   2      for(x=0;x<40000;x++);
+  17   2        a=1;b=0;c=1;d=0;e=1;f=0;g=1;h=0;
+  18   2       for(x=0;x<40000;x++);
+  19   2      
+  20   2       }}
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     84    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

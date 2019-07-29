@@ -1,0 +1,114 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/21/2014  17:43:43  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE stepper.obj TO step
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  stepper.obj (STEPPER)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  step (STEPPER)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         _DATA_GROUP_
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0037H     UNIT         ?PR?MAIN?STEPPER
+            CODE    0837H     0037H     UNIT         ?PR?_DELAY?STEPPER
+            CODE    086EH     0016H     UNIT         ?C?LIB_CODE
+            CODE    0884H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   step (STEPPER)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?STEPPER
+
+?PR?MAIN?STEPPER               0008H    0002H
+  +--> ?PR?_DELAY?STEPPER
+
+?PR?_DELAY?STEPPER             000AH    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  step (STEPPER)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        STEPPER
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00B0H         PUBLIC        P3
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/21/2014  17:43:43  PAGE 2
+
+
+  C:083DH         PUBLIC        _delay
+  C:0800H         PUBLIC        main
+  B:00B0H.0       PUBLIC        a
+  B:00B0H.1       PUBLIC        b
+  B:00B0H.2       PUBLIC        c
+  B:00B0H.3       PUBLIC        d
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:0800H         LINE#         11
+  C:0800H         LINE#         12
+  C:0800H         LINE#         14
+  C:080BH         LINE#         15
+  C:080BH         LINE#         18
+  C:0813H         LINE#         19
+  C:081AH         LINE#         22
+  C:0820H         LINE#         23
+  C:0823H         LINE#         26
+  C:0829H         LINE#         27
+  C:082CH         LINE#         30
+  C:0834H         LINE#         39
+  C:0836H         LINE#         40
+  -------         ENDPROC       MAIN
+  -------         PROC          L?0012
+  -------         ENDPROC       L?0012
+  -------         PROC          _DELAY
+  D:000AH         SYMBOL        x
+  -------         DO            
+  D:0082H         SYMBOL        a
+  D:0006H         SYMBOL        b
+  -------         ENDDO         
+  C:083DH         LINE#         41
+  C:0841H         LINE#         42
+  C:0841H         LINE#         44
+  C:085AH         LINE#         45
+  C:086DH         LINE#         46
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        STEPPER
+
+  -------         MODULE        ?C?SLCMP
+  C:086EH         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 006EH BYTE ( 5%) *
+******************************************************************************
+
+Program Size: data=13.0 xdata=0 code=147
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

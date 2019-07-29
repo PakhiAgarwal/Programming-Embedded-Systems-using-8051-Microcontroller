@@ -1,0 +1,29 @@
+C51 COMPILER V9.01   CONVERG2                                                              06/17/2014 11:11:50 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE CONVERG2
+OBJECT MODULE PLACED IN converg2.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE converg2.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #define LED P2
+   3          void main()
+   4           {
+   5   1       unsigned int y;
+   6   1      unsigned char x,i;
+   7   1      x=0x02;
+   8   1      x=x+0x01; 
+   9   1      for(i=0;i<8;i++)
+  10   1      {
+  11   2      LED=x;
+  12   2       for(y=0;y<40000;y++);
+  13   2      x=x>>3;
+  14   2      x=x+1;
+  15   2       }
+  16   1      while(1)
+  17   1      }
+*** ERROR C141 IN LINE 17 OF CONVERG2.C: syntax error near '}'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

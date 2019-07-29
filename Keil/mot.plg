@@ -1,0 +1,21 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\pakhi\mot.uvproj
+Project File Date:  06/20/2014
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling motor.c...
+linking...
+Program Size: data=13.0 xdata=0 code=167
+creating hex file from "mot"...
+"mot" - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling motor.c...
+linking...
+Program Size: data=13.0 xdata=0 code=167
+creating hex file from "mot"...
+"mot" - 0 Error(s), 0 Warning(s).

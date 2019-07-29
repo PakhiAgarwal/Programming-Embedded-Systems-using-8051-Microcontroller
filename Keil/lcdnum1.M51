@@ -1,0 +1,146 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/24/2014  01:08:27  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE lcdnum.obj TO lcdnum1
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  lcdnum.obj (LCDNUM)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  lcdnum1 (LCDNUM)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     006BH     UNIT         ?C?LIB_CODE
+            CODE    086BH     003BH     UNIT         ?PR?_DELAY?LCDNUM
+            CODE    08A6H     0027H     UNIT         ?PR?MAIN?LCDNUM
+            CODE    08CDH     0025H     UNIT         ?PR?_NEW?LCDNUM
+            CODE    08F2H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   lcdnum1 (LCDNUM)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?LCDNUM
+
+?PR?MAIN?LCDNUM                -----    -----
+  +--> ?PR?_DELAY?LCDNUM
+  +--> ?PR?_NEW?LCDNUM
+
+?PR?_DELAY?LCDNUM              0008H    0002H
+
+?PR?_NEW?LCDNUM                0008H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  lcdnum1 (LCDNUM)
+
+  VALUE           TYPE          NAME
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/24/2014  01:08:27  PAGE 2
+
+
+  ----------------------------------
+
+  -------         MODULE        LCDNUM
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:0875H         PUBLIC        _delay
+  C:08A6H         PUBLIC        main
+  C:08CDH         PUBLIC        _new
+  B:00A0H.2       PUBLIC        en
+  B:00A0H.0       PUBLIC        rs
+  B:00A0H.1       PUBLIC        rw
+  -------         PROC          MAIN
+  C:08A6H         LINE#         8
+  C:08A6H         LINE#         9
+  C:08A6H         LINE#         10
+  C:08A9H         LINE#         11
+  C:08A9H         LINE#         12
+  C:08ACH         LINE#         13
+  C:08AEH         LINE#         14
+  C:08B1H         LINE#         15
+  C:08B1H         LINE#         16
+  C:08B4H         LINE#         17
+  C:08B6H         LINE#         18
+  C:08B9H         LINE#         19
+  C:08B9H         LINE#         20
+  C:08BCH         LINE#         21
+  C:08BEH         LINE#         22
+  C:08C1H         LINE#         23
+  C:08C1H         LINE#         24
+  C:08C4H         LINE#         25
+  C:08C6H         LINE#         26
+  -------         ENDPROC       MAIN
+  C:086BH         SYMBOL        L?0014
+  -------         PROC          L?0013
+  -------         ENDPROC       L?0013
+  C:086BH         SYMBOL        L?0014
+  -------         PROC          _DELAY
+  D:0008H         SYMBOL        x
+  -------         DO            
+  D:0082H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:0875H         LINE#         32
+  C:0879H         LINE#         33
+  C:0879H         LINE#         35
+  C:0892H         LINE#         36
+  C:08A5H         LINE#         37
+  -------         ENDPROC       _DELAY
+  -------         PROC          _NEW
+  D:0002H         SYMBOL        a
+  -------         DO            
+  D:0008H         SYMBOL        q
+  -------         ENDDO         
+  C:08CDH         LINE#         38
+  C:08D1H         LINE#         39
+  C:08D1H         LINE#         42
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/24/2014  01:08:27  PAGE 3
+
+
+  C:08D5H         LINE#         43
+  C:08D5H         LINE#         44
+  C:08E4H         LINE#         45
+  C:08EFH         LINE#         46
+  C:08F1H         LINE#         49
+  -------         ENDPROC       _NEW
+  -------         ENDMOD        LCDNUM
+
+  -------         MODULE        ?C?UIDIV
+  C:0800H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?SLCMP
+  C:0855H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0087H BYTE ( 6%) *
+******************************************************************************
+
+Program Size: data=11.0 xdata=0 code=257
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

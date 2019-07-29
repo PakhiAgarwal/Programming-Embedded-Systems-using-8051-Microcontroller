@@ -1,0 +1,113 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/27/2014  02:31:39  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE lcdfourbit.obj TO fourbit
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  lcdfourbit.obj (LCDFOURBIT)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLCMP)
+
+
+LINK MAP OF MODULE:  fourbit (LCDFOURBIT)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?_DELAY?LCDFOURBIT
+            DATA    000AH     0001H     UNIT         ?DT?_CMD_?LCDFOURBIT
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+                    0000H     0800H                  *** GAP ***
+            CODE    0800H     0039H     UNIT         ?PR?_DELAY?LCDFOURBIT
+            CODE    0839H     001BH     UNIT         ?PR?_CMD_?LCDFOURBIT
+            CODE    0854H     0016H     UNIT         ?C?LIB_CODE
+
+
+
+OVERLAY MAP OF MODULE:   fourbit (LCDFOURBIT)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+
+
+SYMBOL TABLE OF MODULE:  fourbit (LCDFOURBIT)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LCDFOURBIT
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0808H         PUBLIC        _delay
+  C:0839H         PUBLIC        _cmd_
+  B:0090H.1       PUBLIC        en
+  B:0090H.0       PUBLIC        rs
+  -------         PROC          _CMD_
+  D:000AH         SYMBOL        value
+  -------         DO            
+  D:0007H         SYMBOL        h
+  D:0007H         SYMBOL        temp
+  -------         ENDDO         
+  C:0839H         LINE#         6
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/27/2014  02:31:39  PAGE 2
+
+
+  C:083BH         LINE#         7
+  C:083BH         LINE#         9
+  C:083BH         LINE#         10
+  C:083EH         LINE#         11
+  C:0840H         LINE#         12
+  C:0840H         LINE#         13
+  C:0840H         LINE#         14
+  C:0843H         LINE#         15
+  C:0845H         LINE#         16
+  C:0847H         LINE#         17
+  C:084BH         LINE#         18
+  C:084BH         LINE#         19
+  C:084EH         LINE#         20
+  C:084EH         LINE#         21
+  C:084EH         LINE#         22
+  C:0851H         LINE#         23
+  C:0853H         LINE#         24
+  -------         ENDPROC       _CMD_
+  -------         PROC          L?0010
+  -------         ENDPROC       L?0010
+  -------         PROC          _DELAY
+  D:0008H         SYMBOL        a
+  -------         DO            
+  D:0082H         SYMBOL        x
+  D:0006H         SYMBOL        y
+  -------         ENDDO         
+  C:0808H         LINE#         25
+  C:080CH         LINE#         26
+  C:080CH         LINE#         28
+  C:0825H         LINE#         29
+  C:0838H         LINE#         30
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        LCDFOURBIT
+
+  -------         MODULE        ?C?SLCMP
+  C:0854H         PUBLIC        ?C?SLCMP
+  -------         ENDMOD        ?C?SLCMP
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CMD_?LCDFOURBIT
+
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0054H BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=11.0 xdata=0 code=106
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,167 @@
+C51 COMPILER V9.01   SWITCH2                                                               06/17/2014 15:18:36 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE SWITCH2
+OBJECT MODULE PLACED IN switch2.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE switch2.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1           #include<reg51.h>
+   2          sbit a=P1^0;
+   3          sbit b=P1^1;
+   4          sbit c=P1^2;
+   5          sbit d=P1^3;
+   6          sbit e=P1^4;
+   7          sbit f=P1^5;
+   8          sbit g=P1^6;
+   9          sbit h=P1^7;
+  10          sbit i=P2^0;
+  11          sbit j=P2^1;
+  12          sbit k=P2^2;
+  13          sbit l=P2^3;
+  14          void left();
+  15          void right();
+  16          void converge();
+  17          void diverge();
+  18          unsigned int x;
+  19          void main()
+  20           {
+  21   1       unsigned int o=1;
+  22   1      a=0;b=0;c=0;d=0;e=0;f=0;g=0;h=0;i=0;j=0;k=0;l=0;
+  23   1      while(1)
+  24   1      {
+  25   2       switch(o)
+  26   2      {
+  27   3      case 1:{                                        //left
+  28   4                 if(i==1&&o==1)
+  29   4                 {
+  30   5                  left();
+  31   5               
+  32   5                  o++;
+  33   5      }       break;  }
+  34   3      case 2: {                                       //right     
+  35   4              if(j==1&&o==2)
+  36   4                         {
+  37   5                                right();
+  38   5              o++;
+  39   5      }       break;
+  40   4              }
+  41   3      case 3: {                                       //converge     
+  42   4              if(k==1&&o==3)
+  43   4            {converge();          
+  44   5                 o++;
+  45   5        } break;
+  46   4        }
+  47   3      case 4: {                                       //diverge     
+  48   4              if(l==1&&o==4)
+  49   4              {
+  50   5              diverge();
+  51   5              o++;
+  52   5              }break;
+  53   4              }
+  54   3      case 5: {                                          
+  55   4              if(o==5&&(i==1||j==1||k==1||l==1))
+C51 COMPILER V9.01   SWITCH2                                                               06/17/2014 15:18:36 PAGE 2   
+
+  56   4                         {
+  57   5            
+  58   5               
+  59   5                              
+  60   5                      a=1;b=1;c=1;d=1;e=1;f=1;g=1;h=1;
+  61   5                          for(x=0;x<40000;x++);
+  62   5              
+  63   5               }
+  64   4               
+  65   4              break;
+  66   4              }
+  67   3      default: break;
+  68   3      } }}
+  69          void left()
+  70          {
+  71   1              a=0;b=0;c=0;d=0;e=0;f=0;g=0;h=1;
+  72   1              for(x=0;x<40000;x++);
+  73   1               g=1;h=0;
+  74   1              for(x=0;x<40000;x++);
+  75   1              g=0;f=1;
+  76   1               for(x=0;x<40000;x++);
+  77   1              f=0;e=1; 
+  78   1              for(x=0;x<40000;x++);
+  79   1              e=0;d=1; 
+  80   1              for(x=0;x<40000;x++);
+  81   1              d=0;c=1; 
+  82   1              for(x=0;x<40000;x++);
+  83   1              c=0;b=1; 
+  84   1              for(x=0;x<40000;x++);
+  85   1              b=0;a=1;
+  86   1              for(x=0;x<40000;x++);
+  87   1               
+  88   1               }
+  89            void right()
+  90            {
+  91   1                      a=1;b=0;c=0;d=0;e=0;f=0;g=0;h=0;
+  92   1              for(x=0;x<40000;x++);
+  93   1               b=1;a=0;
+  94   1              for(x=0;x<40000;x++);
+  95   1              c=1;b=0;
+  96   1               for(x=0;x<40000;x++);
+  97   1              c=0;d=1; 
+  98   1              for(x=0;x<40000;x++);
+  99   1              d=0;e=1; 
+ 100   1              for(x=0;x<40000;x++);
+ 101   1              e=0;f=1; 
+ 102   1              for(x=0;x<40000;x++);
+ 103   1              f=0;g=1; 
+ 104   1              for(x=0;x<40000;x++);
+ 105   1              g=0;h=1;
+ 106   1              for(x=0;x<40000;x++);
+ 107   1              }
+ 108                  void converge()
+ 109                  {
+ 110   1                  
+ 111   1          a=1;b=0;c=0;d=0;e=0;f=0;g=0;h=1;
+ 112   1              for(x=0;x<40000;x++);
+ 113   1               h=0;a=0;b=1;g=1;
+ 114   1              for(x=0;x<40000;x++);
+ 115   1              g=0;b=0;c=1;f=1;
+ 116   1               for(x=0;x<40000;x++);
+ 117   1              c=0;f=0;d=1;e=1; 
+C51 COMPILER V9.01   SWITCH2                                                               06/17/2014 15:18:36 PAGE 3   
+
+ 118   1               
+ 119   1               }
+ 120          void diverge()
+ 121          {
+ 122   1                      
+ 123   1          a=0;b=0;c=0;d=1;e=1;f=0;g=0;h=0;
+ 124   1              for(x=0;x<40000;x++);
+ 125   1               d=0;e=0;c=1;f=1;
+ 126   1              for(x=0;x<40000;x++);
+ 127   1              g=1;b=1;c=0;f=0;
+ 128   1               for(x=0;x<40000;x++);
+ 129   1              b=0;g=0;a=1;h=1; 
+ 130   1                }
+ 131          
+ 132          
+ 133          
+ 134          
+ 135                  
+ 136                  
+ 137                  
+ 138                  
+ 139                  
+ 140          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1145    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

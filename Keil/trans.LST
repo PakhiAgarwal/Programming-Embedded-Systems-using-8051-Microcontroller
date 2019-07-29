@@ -1,0 +1,56 @@
+C51 COMPILER V9.01   TRANS                                                                 06/25/2014 13:22:44 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE TRANS
+OBJECT MODULE PLACED IN trans.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE trans.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          //void str();
+   3          void main()
+   4          {
+   5   1      unsigned char a[]={"HEllO"},i;
+   6   1      //unsigned int i;
+   7   1      for(i=0;i<5;i++)
+   8   1      {
+   9   2      //a[i]="HELLO";
+  10   2      //SBUF=a[i];
+  11   2      
+  12   2      TMOD=0x20;
+  13   2      TH1=-3;
+  14   2      SCON=0x50;
+  15   2      //str();
+  16   2      SBUF=a[i];
+  17   2      TR1=1;
+  18   2      while(TI==0);
+  19   2      }
+  20   1      TI=0;// TR1=0;
+  21   1      while(1);
+  22   1      //TR1=0;
+  23   1      }  
+  24          /*void str()
+  25          {
+  26          unsigned char a[10],i;
+  27          //unsigned int i;
+  28          for(i=0;i<5;i++)
+  29          {
+  30          a[i]="HELLO";
+  31          SBUF=a[i];
+  32          }
+  33          } */
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     50    ----
+   CONSTANT SIZE    =      6    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       6
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,26 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\pakhi\fourbit.uvproj
+Project File Date:  06/27/2014
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling lcdfourbit.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CMD_?LCDFOURBIT
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+Program Size: data=11.0 xdata=0 code=106
+"fourbit" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling lcdfourbit.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_CMD_?LCDFOURBIT
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+Program Size: data=11.0 xdata=0 code=106
+creating hex file from "fourbit"...
+"fourbit" - 0 Error(s), 2 Warning(s).

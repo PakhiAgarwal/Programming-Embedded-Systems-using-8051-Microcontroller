@@ -1,0 +1,47 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/15/2014  13:31:39  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE hell.obj TO hell
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  hell.obj (HELL)
+
+
+LINK MAP OF MODULE:  hell (HELL)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+
+
+OVERLAY MAP OF MODULE:   hell (HELL)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+
+
+SYMBOL TABLE OF MODULE:  hell (HELL)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        HELL
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  -------         ENDMOD        HELL
+
+*** WARNING L10: CANNOT DETERMINE ROOT SEGMENT
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0000H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=0.0 xdata=0 code=0
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

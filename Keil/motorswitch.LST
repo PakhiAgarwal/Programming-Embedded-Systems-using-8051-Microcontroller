@@ -1,0 +1,71 @@
+C51 COMPILER V9.01   MOTORSWITCH                                                           06/21/2014 18:37:37 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MOTORSWITCH
+OBJECT MODULE PLACED IN motorswitch.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE motorswitch.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          sbit ip1=P1^0;
+   3          sbit ip2=P1^1;
+   4          sbit ip3=P1^2;
+   5          sbit ip4=P1^3;
+   6          sbit op1=P2^0;
+   7          sbit op2=P2^1;
+   8          sbit op3=P2^2;
+   9          sbit op4=P2^3;
+  10          sbit a=P0^0;
+  11          sbit b=P0^1;
+  12          void delay(int x);
+  13          void main()
+  14          {
+  15   1      unsigned int i;
+  16   1      while(i<200)
+  17   1      {
+  18   2      op1=1;op2=0;op3=1;op4=0;
+  19   2      delay(30);
+  20   2      if(a==0&&b==0)
+  21   2      {
+  22   3      ip1=0;ip2=0;ip2=0;ip3=0;                                                
+  23   3      delay(70);
+  24   3      }
+  25   2      if(a==0&&b==1)
+  26   2      {
+  27   3      ip1=1;ip2=0;ip3=0;ip4=0;
+  28   3      delay(70);
+  29   3      }
+  30   2      if(a==1&&b==0)
+  31   2      {
+  32   3      ip1=0;ip2=0;ip3=1;ip4=0;
+  33   3      delay(70);
+  34   3      }
+  35   2      if(a==1&&b==1)
+  36   2      ip1=0;ip2=1;ip3=0;ip4=1;
+  37   2      delay(30);
+  38   2      }
+  39   1      }
+  40          
+  41          void delay(int x)
+  42          {
+  43   1      unsigned int a,b;
+  44   1      for(a=0;a<40000;a++);
+  45   1      for(b=0;b<x;b++);
+  46   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    152    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+C51 COMPILER V9.01   MOTORSWITCH                                                           06/21/2014 18:37:37 PAGE 2   
+
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,265 @@
+C51 COMPILER V9.01   KEYPADLCD                                                             06/20/2014 19:54:51 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE KEYPADLCD
+OBJECT MODULE PLACED IN keypadlcd.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE keypadlcd.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg51.h>
+   2          #define LCD P3
+   3          sbit a=P1^0;
+   4          sbit b=P1^1;
+   5          sbit c=P1^2;
+   6          sbit d=P1^3;
+   7          sbit e=P1^4;
+   8          sbit f=P1^5;
+   9          sbit g=P1^6;
+  10          sbit h=P1^7;
+  11          sbit i=P2^0;
+  12          sbit j=P2^1;
+  13          sbit k=P2^2;
+  14          sbit l=P2^3;
+  15          sbit m=P2^4;
+  16          sbit n=P2^5;
+  17          sbit o=P2^6;
+  18          sbit p=P2^7;
+  19          sbit rs=P3^0;
+  20          sbit rw=P3^1;
+  21          sbit en=P3^2;
+  22          void call();
+  23          void fun();
+  24          void show();
+  25          void left();
+  26          void right();
+  27          void converge();
+  28          void diverge();
+  29          void delay(int t);
+  30          unsigned int v;
+  31          void main()
+  32          {
+  33   1      LCD=0x38;
+  34   1      call();
+  35   1      LCD=0x0E;
+  36   1      call();
+  37   1      LCD=0x06;
+  38   1      call();
+  39   1      LCD=0x80;
+  40   1      call();
+  41   1      show();
+  42   1      P2=0x0F;
+  43   1      while(1)
+  44   1      {
+  45   2      P2=0xFE;
+  46   2      if(m==0)
+  47   2      {
+  48   3      left();
+  49   3      }
+  50   2      if(n==0)
+  51   2      {
+  52   3      right();
+  53   3      }
+  54   2      if(o==0)
+  55   2      {
+C51 COMPILER V9.01   KEYPADLCD                                                             06/20/2014 19:54:51 PAGE 2   
+
+  56   3      converge();
+  57   3      }
+  58   2      if(p==0)
+  59   2      {
+  60   3      diverge();
+  61   3      }
+  62   2      P2=0xFD;
+  63   2      if(m==0)
+  64   2      {
+  65   3      left();
+  66   3      }
+  67   2      if(n==0)
+  68   2      {
+  69   3      right();
+  70   3      }
+  71   2      if(o==0)
+  72   2      {
+  73   3      converge();
+  74   3      }
+  75   2      if(p==0)
+  76   2      {
+  77   3      diverge();
+  78   3      }
+  79   2      P2=0xFC;
+  80   2      if(m==0)
+  81   2      {
+  82   3      left();
+  83   3      }
+  84   2      if(n==0)
+  85   2      {
+  86   3      right();
+  87   3      }
+  88   2      if(o==0)
+  89   2      {
+  90   3      converge();
+  91   3      }
+  92   2      if(p==0)
+  93   2      {
+  94   3      diverge();
+  95   3      }
+  96   2      P2=0xFB;
+  97   2      if(m==0)
+  98   2      {
+  99   3      left();
+ 100   3      }
+ 101   2      if(n==0)
+ 102   2      {
+ 103   3      right();
+ 104   3      }
+ 105   2      if(o==0)
+ 106   2      {
+ 107   3      converge();
+ 108   3      }
+ 109   2      if(p==0)
+ 110   2      {
+ 111   3      diverge();
+ 112   3      }
+ 113   2      P2=0xFA;
+ 114   2      if(m==0)
+ 115   2      {
+ 116   3      left();
+ 117   3      }
+C51 COMPILER V9.01   KEYPADLCD                                                             06/20/2014 19:54:51 PAGE 3   
+
+ 118   2      if(n==0)
+ 119   2      {
+ 120   3      right();
+ 121   3      }
+ 122   2      if(o==0)
+ 123   2      {
+ 124   3      converge();
+ 125   3      }
+ 126   2      if(p==0)
+ 127   2      {
+ 128   3      diverge();
+ 129   3      }
+ 130   2      }
+ 131   1      }
+ 132          void left()
+ 133          {
+ 134   1              a=0;b=0;c=0;d=0;e=0;f=0;g=0;h=1;
+ 135   1              delay(20);
+ 136   1              
+ 137   1               g=1;h=0;
+ 138   1              delay(20);
+ 139   1       
+ 140   1              g=0;f=1;
+ 141   1              delay(20);
+ 142   1               
+ 143   1              f=0;e=1; 
+ 144   1              delay(20);
+ 145   1              
+ 146   1              e=0;d=1; 
+ 147   1              delay(20);
+ 148   1              
+ 149   1              d=0;c=1; 
+ 150   1              delay(20);
+ 151   1              
+ 152   1              c=0;b=1; 
+ 153   1              delay(20);
+ 154   1              
+ 155   1              b=0;a=1;
+ 156   1              delay(20);
+ 157   1              }
+ 158            void right()
+ 159            {
+ 160   1                      a=1;b=0;c=0;d=0;e=0;f=0;g=0;h=0;
+ 161   1              delay(20);
+ 162   1      
+ 163   1                       b=1;a=0;
+ 164   1              delay(20);
+ 165   1              
+ 166   1              c=1;b=0;
+ 167   1              delay(20);
+ 168   1              
+ 169   1              c=0;d=1; 
+ 170   1              delay(20);
+ 171   1              
+ 172   1              d=0;e=1; 
+ 173   1              delay(20);
+ 174   1      
+ 175   1              e=0;f=1; 
+ 176   1              delay(20);
+ 177   1              
+ 178   1              f=0;g=1; 
+ 179   1              delay(20);
+C51 COMPILER V9.01   KEYPADLCD                                                             06/20/2014 19:54:51 PAGE 4   
+
+ 180   1      
+ 181   1              g=0;h=1;
+ 182   1              delay(20);
+ 183   1              }
+ 184                  void converge()
+ 185                  {
+ 186   1                  
+ 187   1          a=1;b=0;c=0;d=0;e=0;f=0;g=0;h=1;
+ 188   1              delay(20);
+ 189   1               h=0;a=0;b=1;g=1;
+ 190   1              delay(20);
+ 191   1              g=0;b=0;c=1;f=1;
+ 192   1               delay(20);
+ 193   1              c=0;f=0;d=1;e=1; 
+ 194   1               
+ 195   1               }
+ 196          void diverge()
+ 197          {
+ 198   1                      
+ 199   1          a=0;b=0;c=0;d=1;e=1;f=0;g=0;h=0;
+ 200   1              delay(20);
+ 201   1               d=0;e=0;c=1;f=1;
+ 202   1              delay(20);
+ 203   1              g=1;b=1;c=0;f=0;
+ 204   1      delay(20);
+ 205   1              b=0;g=0;a=1;h=1; 
+ 206   1                }
+ 207          
+ 208           void delay(int t)
+ 209           {
+ 210   1       unsigned int y,z;
+ 211   1       for(y=0;y<40000;y++);
+ 212   1       for(z=0;z<t;z++);
+ 213   1       }
+ 214           void call()
+ 215          {
+ 216   1      rs=0;rw=0;en=1;
+ 217   1      delay(20);
+ 218   1      en=0;
+ 219   1      }
+ 220          void fun()
+ 221          {
+ 222   1      rs=1;rw=0;en=1;
+ 223   1      delay(20);
+ 224   1      en=0;
+ 225   1      }
+ 226          void show()
+ 227          {
+ 228   1      char pa[5]={"HELLO"};
+ 229   1      for(v=0;v<5;v++)
+ 230   1      {
+ 231   2      LCD=pa[v];
+ 232   2      fun();
+ 233   2      }
+ 234   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    531    ----
+   CONSTANT SIZE    =      5    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+C51 COMPILER V9.01   KEYPADLCD                                                             06/20/2014 19:54:51 PAGE 5   
+
+   DATA SIZE        =      2       7
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

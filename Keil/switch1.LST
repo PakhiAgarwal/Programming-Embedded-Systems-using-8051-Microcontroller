@@ -1,0 +1,128 @@
+C51 COMPILER V9.01   SWITCH1                                                               06/17/2014 15:27:43 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE SWITCH1
+OBJECT MODULE PLACED IN switch1.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE switch1.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1           #include<reg51.h>
+   2          sbit a=P1^0;
+   3          sbit b=P1^1;
+   4          sbit c=P1^2;
+   5          sbit d=P1^3;
+   6          sbit e=P1^4;
+   7          sbit f=P1^5;
+   8          sbit g=P1^6;
+   9          sbit h=P1^7;
+  10          sbit i=P2^0;
+  11          void main()
+  12           {
+  13   1       unsigned int x,o=1;
+  14   1      a=0;b=0;c=0;d=0;e=0;f=0;g=0;h=0;i=0;
+  15   1       while(1)
+  16   1       {
+  17   2       switch(o)
+  18   2      {
+  19   3      case 1:{                                        //left
+  20   4                 if(i==1&&o==1)
+  21   4                 {
+  22   5                  
+  23   5              a=0;b=0;c=0;d=0;e=0;f=0;g=0;h=1;
+  24   5              for(x=0;x<40000;x++);
+  25   5               g=1;h=0;
+  26   5              for(x=0;x<40000;x++);
+  27   5              g=0;f=1;
+  28   5               for(x=0;x<40000;x++);
+  29   5              f=0;e=1; 
+  30   5              for(x=0;x<40000;x++);
+  31   5              e=0;d=1; 
+  32   5              for(x=0;x<40000;x++);
+  33   5              d=0;c=1; 
+  34   5              for(x=0;x<40000;x++);
+  35   5              c=0;b=1; 
+  36   5              for(x=0;x<40000;x++);
+  37   5              b=0;a=1;
+  38   5              for(x=0;x<40000;x++);
+  39   5               o++;}
+  40   4              break;  }
+  41   3      case 2: {                                       //right     
+  42   4              if(i==1&&o==2)
+  43   4                         {
+  44   5                
+  45   5                      a=1;b=0;c=0;d=0;e=0;f=0;g=0;h=0;
+  46   5              for(x=0;x<40000;x++);
+  47   5               b=1;a=0;
+  48   5              for(x=0;x<40000;x++);
+  49   5              c=1;b=0;
+  50   5               for(x=0;x<40000;x++);
+  51   5              c=0;d=1; 
+  52   5              for(x=0;x<40000;x++);
+  53   5              d=0;e=1; 
+  54   5              for(x=0;x<40000;x++);
+  55   5              e=0;f=1; 
+C51 COMPILER V9.01   SWITCH1                                                               06/17/2014 15:27:43 PAGE 2   
+
+  56   5              for(x=0;x<40000;x++);
+  57   5              f=0;g=1; 
+  58   5              for(x=0;x<40000;x++);
+  59   5              g=0;h=1;
+  60   5              for(x=0;x<40000;x++);
+  61   5               o++;}
+  62   4              break;
+  63   4              }
+  64   3      case 3: {                                       //converge     
+  65   4              if(i==1&&o==3)
+  66   4                   
+  67   4                      {
+  68   5                      a=1;b=0;c=0;d=0;e=0;f=0;g=0;h=1;
+  69   5              for(x=0;x<40000;x++);
+  70   5               h=0;a=0;b=1;g=1;
+  71   5              for(x=0;x<40000;x++);
+  72   5              g=0;b=0;c=1;f=1;
+  73   5               for(x=0;x<40000;x++);
+  74   5              c=0;f=0;d=1;e=1; 
+  75   5               o++;}
+  76   4              break;
+  77   4              }
+  78   3      case 4: {                                       //diverge     
+  79   4              if(i==1&&o==4)
+  80   4                         {
+  81   5                 
+  82   5                      a=0;b=0;c=0;d=1;e=1;f=0;g=0;h=0;
+  83   5              for(x=0;x<40000;x++);
+  84   5               d=0;e=0;c=1;f=1;
+  85   5              for(x=0;x<40000;x++);
+  86   5              g=1;b=1;c=0;f=0;
+  87   5               for(x=0;x<40000;x++);
+  88   5              b=0;g=0;a=1;h=1; 
+  89   5               o++;}
+  90   4              break;
+  91   4              }
+  92   3      case 5: {                                       //diverge     
+  93   4              if(o==5&&i==1)
+  94   4               
+  95   4                      {
+  96   5                      a=1;b=1;c=1;d=1;e=1;f=1;g=1;h=1;
+  97   5              for(x=0;x<40000;x++);
+  98   5              
+  99   5               }
+ 100   4              break;
+ 101   4              }
+ 102   3      default: break;
+ 103   3      }}}
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1146    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,41 @@
+C51 COMPILER V9.01   BYTESHIFT                                                             06/19/2014 21:04:47 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE BYTESHIFT
+OBJECT MODULE PLACED IN byteshift.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE byteshift.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1           #include<reg51.h>
+   2          #define LED P2
+   3          void main()
+   4           {
+   5   1       unsigned int y;
+   6   1      unsigned char x,i;
+   7   1      while(1) 
+   8   1      {
+   9   2      x=0x01;
+  10   2      for(i=0;i<8;i++)
+  11   2      {
+  12   3      LED=x;
+  13   3      for(y=0;y<40000;y++);
+  14   3      x=x<<1;
+  15   3      }
+  16   2       }
+  17   1      }
+  18          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     49    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
