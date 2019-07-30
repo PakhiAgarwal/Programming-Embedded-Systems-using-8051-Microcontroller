@@ -2,7 +2,7 @@
 
 ### 1. Alternate Blinking of LED using Switch
 <p align="center">
-  <img width="460" height="300" src="Images/Alternate blinking of LED using Switch.JPG">
+  <img src="Images/Alternate blinking of LED using Switch.JPG">
 </p>
 
 ``` c
@@ -28,7 +28,7 @@ TF1=0; TR1=0; }
 
 ### 2. Working of multiple LEDs with multiple Switches
 <p align="center">
-  <img width="460" height="300" src="Images/Working of Multiple LEDs with Multiple Switches.JPG">
+  <img src="Images/Working of Multiple LEDs with Multiple Switches.JPG">
 </p>
 
 ``` c
@@ -103,7 +103,7 @@ void diverge()
 
 ### 3. Blinking of multiple LEDs using Keypad Matrix
 <p align="center">
-  <img width="460" height="300" src="Images/Blinking of Multiple LEDs using Keypad Matrix.JPG">
+  <img src="Images/Blinking of Multiple LEDs using Keypad Matrix.JPG">
 </p>
 
 ```c
@@ -186,7 +186,7 @@ delay(20); d=0;e=0;c=1;f=1; delay(20); g=1;b=1;c=0;f=0; delay(20); b=0;g=0;a=1;h
 ### 4. Display String on LCD
 
 <p align="center">
-  <img width="460" height="300" src="Images/Displaying string on LCD.JPG">
+  <img src="Images/Displaying string on LCD.JPG">
 </p>
 
 ```c
@@ -215,7 +215,7 @@ rs=1;rw=0;en=1; delay(10); en=0;  }
 ### 5. Receive data on LCD using Transmitter and Receiver 
 
 <p align="center">
-  <img width="460" height="300" src="Images/Receiving data on LCD using Transmitter and Receiver.JPG">
+  <img src="Images/Receiving data on LCD using Transmitter and Receiver.JPG">
 </p>
 
 ```c
@@ -252,7 +252,7 @@ rs=1;rw=0;en=1; delay(20); en=0;	  }
 ### 6. Transmit data using Transmitter Receiver
 
 <p align="center">
-  <img width="460" height="300" src="Images/Transmit data using Transmitter and Receiver.JPG">
+  <img src="Images/Transmit data using Transmitter and Receiver.JPG">
 </p>
 
 ```c
@@ -271,7 +271,7 @@ TI=0;  while(1);  }
 ### 7. Working of Motor
 
 <p align="center">
-  <img width="460" height="300" src="Images/Working of Motor.JPG">
+  <img src="Images/Working of Motor.JPG">
 </p>
 
 ```c
@@ -296,7 +296,7 @@ for(a=0;a<40000;a++); for(b=0;b<x;b++);  }
 ### 8. Seven Segment Display
 
 <p align="center">
-  <img width="460" height="300" src="Images/Seven Segment Display.JPG">
+  <img src="Images/Seven Segment Display.JPG">
 </p>
 
 ```c
